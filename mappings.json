@@ -13,6 +13,24 @@
       "author": "kenkenji",
       "timestamp": "2026-08-06T13:18:22Z",
       "model_version": "2"
+    },
+    "3": {
+      "pr_number": 3,
+      "pr_title": "feat: リアルタイム通知機能の追加（WebSocket + 通知サービス）",
+      "pr_url": "https://github.com/kenkenji/at-demo/pull/3",
+      "merged_at": "2026-08-06T13:24:43Z",
+      "components": [
+        "web-frontend",
+        "api-server"
+      ],
+      "source": "ai",
+      "author": "kenkenji",
+      "timestamp": "2026-08-06T13:26:13Z",
+      "ai_components": [
+        "api-server",
+        "web-frontend"
+      ],
+      "model_version": "2"
     }
   }
 }

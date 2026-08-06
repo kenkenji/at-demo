@@ -15,7 +15,8 @@
       "description": "タスクの作成・更新・削除時にサブスクライバーへリアルタイム通知を配信する",
       "confidence": "high",
       "reasoning": "PR本文および追加ファイル(src/services/notification-service.ts)から、新しい独立したサービスコンポーネントが明示的に追加されていることが分かる",
-      "source": "llm"
+      "source": "llm",
+      "status": "accepted"
     },
     {
       "action": "add",
@@ -28,7 +29,8 @@
       "description": "WebSocket接続の管理、認証済みユーザーの接続許可、ルームベースのサブスクリプション管理を行う",
       "confidence": "high",
       "reasoning": "PR本文および追加ファイル(src/services/websocket-gateway.ts)から、新しい独立したゲートウェイコンポーネントが明示的に追加されていることが分かる",
-      "source": "llm"
+      "source": "llm",
+      "status": "rejected"
     },
     {
       "action": "add",
@@ -38,7 +40,10 @@
       "description": "リアルタイム通知の受信",
       "technology": "WebSocket",
       "reasoning": "PR本文に「Web Frontendから直接WebSocket Gatewayに接続する新しい通信経路を追加」と明記されており、既存のREST API通信経路とは別の新しい通信経路である",
-      "source": "llm"
+      "source": "llm",
+      "status": "accepted"
     }
-  ]
+  ],
+  "resolved_at": "2026-08-06T13:35:00Z",
+  "resolved_by": "kenkenji"
 }

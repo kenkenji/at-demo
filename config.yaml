@@ -1,0 +1,4 @@
+spa:
+  url: https://kenkenji.github.io/at-demo
+llm:
+  model: claude-sonnet-5

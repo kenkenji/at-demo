@@ -1,74 +1,75 @@
-version: "2"
+version: '3'
 model:
-  type: "c4"
+  type: c4
 components:
-  # Software System
   - id: task-app
-    name: "Task Management App"
+    name: Task Management App
     level: system
-    description: "チーム向けタスク管理アプリケーション"
-    tags: [internal]
-
+    description: チーム向けタスク管理アプリケーション
+    tags:
+      - internal
   - id: external-mail
-    name: "Email Service"
+    name: Email Service
     level: system
-    description: "外部メール送信サービス（SendGrid等）"
-    tags: [external]
-
-  # Container
+    description: 外部メール送信サービス（SendGrid等）
+    tags:
+      - external
   - id: web-frontend
-    name: "Web Frontend"
+    name: Web Frontend
     level: container
     parent: task-app
-    technology: "React + TypeScript"
-    description: "ブラウザ上で動作するSPA"
-    tags: [frontend]
-
+    description: ブラウザ上で動作するSPA
+    technology: React + TypeScript
+    tags:
+      - frontend
   - id: api-server
-    name: "API Server"
+    name: API Server
     level: container
     parent: task-app
-    technology: "Node.js + Express"
-    description: "REST APIを提供するバックエンド"
-    tags: [backend]
-
+    description: REST APIを提供するバックエンド
+    technology: Node.js + Express
+    tags:
+      - backend
   - id: database
-    name: "Database"
+    name: Database
     level: container
     parent: task-app
-    technology: "PostgreSQL"
-    description: "タスク・ユーザーデータの永続化"
-    tags: [storage]
-
-  # Component
+    description: タスク・ユーザーデータの永続化
+    technology: PostgreSQL
+    tags:
+      - storage
   - id: auth-module
-    name: "Auth Module"
+    name: Auth Module
     level: component
     parent: api-server
-    technology: "Passport.js"
-    description: "認証・認可処理"
-    tags: [security]
-
+    description: 認証・認可処理
+    technology: Passport.js
+    tags:
+      - security
   - id: task-service
-    name: "Task Service"
+    name: Task Service
     level: component
     parent: api-server
-    technology: "Express Router"
-    description: "タスクCRUDのビジネスロジック"
-    tags: [core]
-
+    description: タスクCRUDのビジネスロジック
+    technology: Express Router
+    tags:
+      - core
+  - id: notification-service
+    name: Notification Service
+    level: component
+    parent: api-server
+    description: タスクの作成・更新・削除時にサブスクライバーへリアルタイム通知を配信する
+    technology: Socket.io
 relations:
   - from: web-frontend
     to: api-server
-    description: "APIリクエスト"
-    technology: "HTTPS/REST"
-
+    description: APIリクエスト
+    technology: HTTPS/REST
   - from: api-server
     to: database
-    description: "データ読み書き"
-    technology: "SQL (pg driver)"
-
+    description: データ読み書き
+    technology: SQL (pg driver)
   - from: api-server
     to: external-mail
-    description: "通知メール送信"
-    technology: "SMTP / SendGrid API"
+    description: 通知メール送信
+    technology: SMTP / SendGrid API

@@ -1,1 +1,23 @@
-{"version":"1.0","entries":[]}
+{
+  "version": "1.0",
+  "entries": [
+    {
+      "model_version": "3",
+      "timestamp": "2026-08-06T13:34:58Z",
+      "changes": [
+        {
+          "type": "add",
+          "target": "component",
+          "id": "notification-service",
+          "summary": "Notification Service を追加"
+        }
+      ],
+      "trigger": {
+        "type": "pr",
+        "pr_number": 3,
+        "pr_url": "https://github.com/kenkenji/at-demo/pull/3"
+      },
+      "author": "kenkenji"
+    }
+  ]
+}

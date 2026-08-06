@@ -1,1 +1,18 @@
-{"version":"1.0","mappings":{}}
+{
+  "version": "1.0",
+  "mappings": {
+    "1": {
+      "pr_number": 1,
+      "pr_title": "feat: API Serverの設定ファイルを追加",
+      "pr_url": "https://github.com/kenkenji/at-demo/pull/1",
+      "merged_at": "2026-08-06T13:15:34Z",
+      "components": [
+        "api-server"
+      ],
+      "source": "manual",
+      "author": "kenkenji",
+      "timestamp": "2026-08-06T13:18:22Z",
+      "model_version": "2"
+    }
+  }
+}

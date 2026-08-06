@@ -1,1 +1,17 @@
-{"version":"1.0","entries":[]}
+{
+  "version": "1.0",
+  "entries": [
+    {
+      "id": "pr-1-20260806T131822Z",
+      "timestamp": "2026-08-06T13:18:22Z",
+      "pr_number": 1,
+      "pr_title": "feat: API Serverの設定ファイルを追加",
+      "pr_url": "https://github.com/kenkenji/at-demo/pull/1",
+      "components": [
+        "api-server"
+      ],
+      "source": "manual",
+      "author": "kenkenji"
+    }
+  ]
+}
